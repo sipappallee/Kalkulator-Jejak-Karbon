@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator Jejak Karbon</title>
+    <link rel="shortcut icon" href="tanaman1.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <section class="background">
+        <div class="container">
+            <h2>Jejak Karbon</h2>
+            <form id="carbonForm">
+                <table>
+                    <tr>
+                        <td><label for="kategori">Pilih Kategori:</label></td>
+                        <td>
+                            <select id="kategori">
+                                <option value="">- Pilih Kategori -</option>
+                                <option value="ac">AC</option>
+                                <option value="mobil">Mobil</option>
+                                <option value="motor">Motor</option>
+                                <option value="lampu">Lampu</option>
+                                <option value="tv">TV</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr id="acInput" style="display: none;">
+                        <td><label for="watt">Masukkan Daya AC (PK):</label></td>
+                        <td>
+                            <select id="watt">
+                                <option value="750">0.5 PK</option>
+                                <option value="1125">0.75 PK</option>
+                                <option value="1500">1 PK</option>
+                                <option value="2250">1.5 PK</option>
+                                <option value="3000">2 PK</option>
+                                <option value="3750">2.5 PK</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="jumlah">Masukkan jumlah penggunaan (jam):</label></td>
+                        <td><input type="number" id="jumlah" min="1" placeholder="Masukkan angka"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="barang">Jumlah Barang yang dipakai:</label></td>
+                        <td><input type="number" id="barang" min="1" placeholder="Masukkan angka"></td>
+                    </tr>
+                </table>
+
+                <button type="button" onclick="hitungJejakKarbon()">Hitung</button>
+            </form>
+            <h3 id="hasil"></h3>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
